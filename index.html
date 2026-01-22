@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Devotion - Women's Prayer & Empowerment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        /*
+          EmailJS client-side autoresponder (optional)
+          - Sign up at https://www.emailjs.com/ and create a Service + Template.
+          - Replace the placeholders below and set `EMAILJS_ENABLED = true`.
+          - Template should accept: `to_name`, `to_email`, `interest`, `message`.
+        */
+        const EMAILJS_ENABLED = false; // set to true after configuring the values below
+        const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+        const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+        const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+        if (window.emailjs && EMAILJS_PUBLIC_KEY) {
+            try { emailjs.init(EMAILJS_PUBLIC_KEY); } catch (e) { console.warn('EmailJS init failed', e); }
+        }
+    </script>
+    <style>
+        /* Base Styles & Variables */
+        :root {
+            --primary: #8B0000; /* Deep red from founder's rose */
+            --secondary: #4d0000; /* Deep green from background */
+            --accent: #D4A76A; /* Warm gold */
+            --light: #F8F5F0; /* Cream background */
+            --dark: #1A1A1A; /* Dark text */
+            --gray: #dbdcdd;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+            --font-heading: 'Georgia', serif;
+            --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #700000;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #1e3a21;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .highlight {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .scripture {
+            font-style: italic;
+            color: var(--secondary);
+            border-left: 3px solid var(--accent);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            color: var(--accent);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        
+        .logo-main {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 0.6rem;
+            color: var(--secondary);
+            letter-spacing: 3px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('MD.jpeg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-scripture {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+        }
+        
+        /* Vision Section */
+        .vision-box {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .vision-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Core Values */
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Programs */
+        .programs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .program-header {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.95), rgba(139, 0, 0, 0.85));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+        
+        .program-header h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        
+        .program-verse {
+            background-color: rgba(44, 85, 48, 0.1);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Activities */
+        .activities-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .activity-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .activity-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-right: 20px;
+            z-index: 2;
+        }
+        
+        .activity-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            flex: 1;
+        }
+        
+        .activity-frequency {
+            display: inline-block;
+            background-color: rgba(139, 0, 0, 0.1);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Founder Section */
+        .founder-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .founder-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .founder-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .founder-name {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item > div:last-child {
+            overflow: hidden;
+            word-break: break-word;
+            flex: 1;
+        }
+        
+        .contact-item p {
+            word-break: break-word;
+            overflow-wrap: break-word;
+            margin: 0;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(139, 0, 0, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Carousel / Slider */
+        .carousel-container {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            overflow: hidden;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            top: 0;
+            left: 0;
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid white;
+        }
+        
+        .carousel-dot.active {
+            background-color: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 15px 18px;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+        
+        .carousel-arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .carousel-arrow.prev {
+            left: 10px;
+        }
+        
+        .carousel-arrow.next {
+            right: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .founder-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .programs-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .vision-box, .contact-info, .contact-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="logo.png" alt="Morning Devotion Logo">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">MORNING DEVOTION</span>
+                    <span class="logo-sub">PRAYER GROUP</span>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#vision">Vision & Mission</a></li>
+                <li><a href="#values">Core Values</a></li>
+                <li><a href="#programs">Our Programs</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#founder">Founder</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Building Women to Display Christlike a Character</h1>
+            <p>Empowering women through healing of the soul, prayer, fasting, and the Word of God to fulfill their God-given assignments.</p>
+            
+            <div class="hero-scripture">
+                <p>"At each and every sunrise you will hear my voice as I prepare my sacrifice of prayer to you. Every morning, I lay out the pieces of my life on the altar and wait for your fire to fall upon my heart."</p>
+                <p class="text-center" style="margin-top: 10px; font-weight: 600;">- PSALM 5:3 TPT</p>
+            </div>
+            
+            <div>
+                <a href="#programs" class="btn btn-primary" style="margin-right: 15px;">Our Programs</a>
+                <a href="#contact" class="btn btn-secondary">Join Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="section" id="vision">
+        <div class="container">
+            <h2 class="section-title">Our Vision & Mission</h2>
+            
+            <div class="vision-box">
+                <div class="vision-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>OUR VISION</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Building women to display a Christlike character, to equip them to be fully functional in their various God-given assignments.</p>
+                
+                <h3>OUR MISSION</h3>
+                <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                    <p style="margin-bottom: 15px;"><i class="fas fa-heart highlight" style="margin-right: 10px;"></i> Building women through healing of the soul, prayer, fasting, and the word of God.</p>
+                    <p><i class="fas fa-sun highlight" style="margin-right: 10px;"></i> Building women through teaching them to seek divine guidance from God every morning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section" id="values" style="background-color: rgba(44, 85, 48, 0.05);">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3>Full Dependence on God</h3>
+                    <p>We rely completely on God's guidance, wisdom, and provision in all we do.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Displaying a Godly Character</h3>
+                    <p>We strive to reflect Christ's character in our thoughts, words, and actions.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart-circle-check"></i>
+                    </div>
+                    <h3>A Healed Vessel</h3>
+                    <p>We believe in healing and restoration to become effective vessels for God's use.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3>Holiness</h3>
+                    <p>We pursue holiness in all areas of life as an act of worship to God.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <h3>Sense of Community</h3>
+                    <p>We foster genuine relationships and support one another in our spiritual journeys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="section" id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Programs</h2>
+            
+            <div class="programs-container">
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Adopt a Sister Initiative</h3>
+                    </div>
+                    <div class="program-body">
+                        <p><strong>Aim:</strong> To ensure that no daughter of Zion experiences lack or struggles to obtain basics like sanitary pads and cosmetics.</p>
+                        
+                        <div class="program-verse">
+                            <p>"All the believers were one in heart and mind. No one claimed that any of their possessions was their own, but they shared everything they had... that there were no needy persons among them."</p>
+                            <p><strong>Acts 4:32-35 NIV</strong></p>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn-primary">Support This Initiative</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Mentorship Program</h3>
+                    </div>
+                    <div class="program-body">
+                        <p>Older sisters mentor younger sisters based on biblical principles for womanhood, marriage, and family.</p>
+                        
+                        <div class="program-verse">
+                            <p>"The older women likewise, that they be reverent in behaviour... teachers of good things—that they admonish the young women to love their husbands, to love their children, to be discreet, chaste, homemakers, good, obedient to their own husbands, that the word of God may not be blasphemed."</p>
+                            <p><strong>Titus 2:3-5 NKJV</strong></p>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn-primary">Join Mentorship</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3>Healed Girl Child</h3>
+                    </div>
+                    <div class="program-body">
+                        <p><strong>Aim:</strong> To create a safe space for women, where they can share their healing journeys with each other, to shift the focus from pain to purpose.</p>
+                        
+                        <div class="program-verse">
+                            <p>"When Jesus saw the woman, he called her over and said, 'You are now well.'"</p>
+                            <p><strong>Luke 13:12 CEV</strong></p>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn-primary">Join Healing Session</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section" id="activities" style="background-color: rgba(139, 0, 0, 0.05);">
+        <div class="container">
+            <h2 class="section-title">Daily, Weekly & Monthly Activities</h2>
+            
+            <div class="activities-timeline">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>When Women Pray</h3>
+                        <p>Daily prayer at 5am. Join us as we seek God's face together every morning.</p>
+                        <span class="activity-frequency">DAILY</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-book-bible"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Bible Study</h3>
+                        <p>Deep dive into God's Word for wisdom, guidance, and transformation.</p>
+                        <span class="activity-frequency">EVERY WEDNESDAY</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Prayer Week</h3>
+                        <p>One week each month dedicated to intensive prayer and spiritual warfare.</p>
+                        <span class="activity-frequency">ONE WEEK PER MONTH</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Prayer and Fasting</h3>
+                        <p>Monthly fasting for breakthrough, direction, and spiritual growth.</p>
+                        <span class="activity-frequency">ONCE A MONTH</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-heart-circle-plus"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Healed Girl Child Session</h3>
+                        <p>Monthly gathering for sharing healing journeys and finding purpose in pain.</p>
+                        <span class="activity-frequency">ONCE A MONTH</span>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-mountain-sun"></i>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Face to Face Prayer Retreat</h3>
+                        <p>Annual retreat for deeper connection with God and fellow brothers & sisters in Christ.</p>
+                        <span class="activity-frequency">ANNUAL EVENT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section - Precious Moments -->
+    <section class="section" id="moments" style="background: linear-gradient(135deg, rgba(139, 0, 0, 0.05), rgba(44, 85, 48, 0.05));">
+        <div class="container">
+            <h2 class="section-title">Precious Moments Together</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <img src="WhatsApp Image 2026-01-18 at 18.51.11.jpeg" alt="Precious Moment 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="WhatsApp Image 2026-01-18 at 18.51.38.jpeg" alt="Precious Moment 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="WhatsApp Image 2026-01-18 at 18.51.47.jpeg" alt="Precious Moment 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="WhatsApp Image 2026-01-18 at 18.51.55.jpeg" alt="Precious Moment 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="WhatsApp Image 2026-01-18 at 18.52.04.jpeg" alt="Precious Moment 5">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="WhatsApp Image 2026-01-18 at 18.52.27.jpeg" alt="Precious Moment 6">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="WhatsApp Image 2026-01-18 at 18.52.50.jpeg" alt="Precious Moment 7">
+                    </div>
+                </div>
+                
+                <button class="carousel-arrow prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-arrow next" onclick="nextSlide()">❯</button>
+                
+                <div class="carousel-nav">
+                    <span class="carousel-dot active" onclick="currentSlide(0)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(4)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(5)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section" id="founder">
+        <div class="container">
+            <h2 class="section-title">Our Founder</h2>
+            
+            <div class="founder-container">
+                <div class="founder-image">
+                    <img src="founder.jpeg" alt="Yonelisa Buqa - Founder of Morning Devotion">
+                    <h4 class="founder-name">YONELISA BUQA</h4>
+                </div>
+                
+                <div class="founder-info">
+                    <h3>Leading Women to God's Purpose</h3>
+                    <p>The founder of Morning Devotion is a woman dedicated to building women to display a Christlike character through prayer, fasting, and the Word of God. With a heart for healing and restoration, she has created a safe space for women to grow spiritually and support one another in their journeys.</p>
+                    
+                    <p style="margin-top: 20px;">Inspired by Psalm 5:3, she emphasizes the importance of morning devotion and seeking God's guidance at the start of each day. Her vision has grown into a community where women are equipped to be fully functional in their various God-given assignments.</p>
+                    
+                    <div style="margin-top: 30px; display: flex; align-items: center;">
+                        <div style="background-color: var(--primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-right: 15px;">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic;">"Every morning, I lay out the pieces of my life on the altar and wait for your fire to fall upon my heart. This is the heart of Morning Devotion."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background-color: rgba(44, 85, 48, 0.05);">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>066 578 5643</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>morningdevotionprayergroup@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Based in South Africa, with members joining from around the world through our online platforms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Prayer Time</h4>
+                            <p>Daily at 5am (Online & In-person where possible)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@MorningDevotionPrayerGroup" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                                <div class="contact-form">
+                                        <!--
+                                                Autoresponder setup:
+                                                - I created an HTML template at: thank-you-email.html
+                                                - To enable automatic replies with FormSubmit:
+                                                    1) Sign in at https://formsubmit.co and add your form.
+                                                    2) In FormSubmit's settings use the "Autoresponder" or "Autorespond" option
+                                                         and paste the contents of thank-you-email.html (use [Name] and [Interest]
+                                                         placeholders where needed).
+                                                - The form already includes the user's email field (name="email") which
+                                                    FormSubmit will use as the reply-to address.
+                                        -->
+                    <h3>Send Us a Message</h3>
+                    <p>Interested in joining Morning Devotion or supporting our initiatives? Reach out to us!</p>
+                    
+                    <form id="contactForm" action="https://formsubmit.co/morningdevotionprayergroup@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Message from Morning Devotion Website">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="form-control" name="interest" required>
+                                <option value="" disabled selected>Interested In...</option>
+                                <option value="membership">Becoming a Member</option>
+                                <option value="adopt-sister">Adopt a Sister Initiative</option>
+                                <option value="mentorship">Mentorship Program</option>
+                                <option value="healed-girl">Healed Girl Child Sessions</option>
+                                <option value="prayer">Joining Daily Prayer</option>
+                                <option value="support">Supporting Financially</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">MORNING DEVOTION</div>
+                    <p>Building women with a Christlike characters, to equip them to be fully functional in their various God-given assignments.</p>
+                    <p style="margin-top: 15px; font-style: italic;">"At each and every sunrise you will hear my voice..." - Psalm 5:3</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#vision">Vision & Mission</a></li>
+                        <li><a href="#values">Core Values</a></li>
+                        <li><a href="#programs">Our Programs</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="#programs">Adopt a Sister</a></li>
+                        <li><a href="#programs">Mentorship Program</a></li>
+                        <li><a href="#programs">Healed Girl Child</a></li>
+                        <li><a href="#activities">Daily Prayer</a></li>
+                        <li><a href="#activities">Bible Study</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> 066 578 5643</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> morningdevotionprayergroup@gmail.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 8px;"></i> Daily Prayer: 5am</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Morning Devotion Prayer Group. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">Building Women of a Christlike Character</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Form submission: AJAX POST to Formsubmit.co (no backend required).
+        // Prevent page navigation and show a friendly success/error state.
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            // capture fields for optional autoresponder
+            const submitted = {
+                name: formData.get('name') || '',
+                email: formData.get('email') || '',
+                interest: formData.get('interest') || '',
+                message: formData.get('message') || ''
+            };
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    btn.textContent = 'Message Sent Successfully!';
+                    btn.style.backgroundColor = '#28a745';
+                    form.reset();
+
+                    // Send autoresponse via EmailJS if enabled
+                    if (EMAILJS_ENABLED && window.emailjs) {
+                        const templateParams = {
+                            to_name: submitted.name,
+                            to_email: submitted.email,
+                            interest: submitted.interest,
+                            message: submitted.message
+                        };
+
+                        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                        .then(() => console.log('Autoresponse sent via EmailJS'))
+                        .catch(err => console.error('EmailJS send error:', err));
+                    }
+                } else {
+                    return response.json().then(data => { throw new Error(data.message || 'Submission failed'); });
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                btn.textContent = 'Error - Try Again';
+                btn.style.backgroundColor = '#dc3545';
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.disabled = false;
+                }, 2500);
+            });
+        });
+        
+        // Carousel / Slider functionality
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        
+        function showSlide(index) {
+            // Wrap around
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+            
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Add active class to current slide and dot
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+        
+        function currentSlide(index) {
+            showSlide(index);
+        }
+        
+        // Auto-advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
